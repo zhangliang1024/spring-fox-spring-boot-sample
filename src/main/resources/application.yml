@@ -1,0 +1,55 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    master:
+      jdbc-url: jdbc:mysql://192.168.80.134:3306/test?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      connectionTimeout: 30000
+      validationTimeout: 5000
+      maxPoolSize: 200
+      minIdle: 100
+    slave01:
+      jdbc-url: jdbc:mysql://192.168.80.135:3306/test?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      connectionTimeout: 30000
+      validationTimeout: 5000
+      maxPoolSize: 200
+      minIdle: 100
+    slave02:
+      jdbc-url: jdbc:mysql://192.168.80.135:3306/test?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      connectionTimeout: 30000
+      validationTimeout: 5000
+      maxPoolSize: 200
+      minIdle: 100
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        use-model-v3: true
+
+server:
+  port: 8081
+
+
+#mybatis
+mybatis:
+  ###把xml文件放在com.XX.mapper.*中可能会出现找到的问题，这里把他放在resource下的mapper中
+  mapper-mapperLocations: classpath*:mapper/*.xml
+  type-aliases-package: com.zhliang.pzy.spring.fox.dynamic.datasource.po
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    useGeneratedKeys: true

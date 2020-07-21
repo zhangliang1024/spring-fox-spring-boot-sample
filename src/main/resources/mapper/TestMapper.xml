@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhliang.pzy.spring.fox.dynamic.datasource.mapper.TestMapper">
+
+    <insert id="insert">
+      insert into test
+      (`name`)
+      values
+      (#{name,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateByPrimarkey">
+        update test
+        set name = #{name,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="selectById" resultType="com.zhliang.pzy.spring.fox.dynamic.datasource.po.Test" parameterType="java.lang.Integer">
+        select
+          *
+        from test
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+
+    <select id="selectAll" resultType="com.zhliang.pzy.spring.fox.dynamic.datasource.po.Test">
+        select
+          *
+        from test
+    </select>
+</mapper>
