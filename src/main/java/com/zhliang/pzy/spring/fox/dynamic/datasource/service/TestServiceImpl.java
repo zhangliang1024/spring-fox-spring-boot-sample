@@ -5,6 +5,7 @@ import com.zhliang.pzy.spring.fox.dynamic.datasource.po.Test;
 import com.zhliang.pzy.spring.fox.dynamic.datasource.mapper.TestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,9 +19,12 @@ public class TestServiceImpl implements TestService {
     @Autowired
     private TestMapper tMapper;
 
+    @Transactional
     @Override
     public int save(Test t) {
-        return tMapper.insert(t);
+        tMapper.insert(t);
+        int i = 1/0;
+        return 1;
     }
 
     @Master

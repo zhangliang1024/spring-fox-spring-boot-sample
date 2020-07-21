@@ -3,6 +3,13 @@
 >
 > @EnableOpenApi注解即可启用文档
 
+### 说明
+```markdown
+1. 演示SpringFox3.0
+2. common-starter 演示项目
+3. dynamic-datasource-starter 演示项目
+
+```
 
 
 ### 参考文档
