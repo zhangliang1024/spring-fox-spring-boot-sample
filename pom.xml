@@ -62,6 +62,12 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!--多数据源 读写分离测试-->
+
+        <dependency>
+            <groupId>com.zhliang.pzy</groupId>
+            <artifactId>pzy-log-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: spring-boot-sample
   profiles:
     active: dev
   datasource:
@@ -32,6 +34,7 @@ spring:
       validationTimeout: 5000
       maxPoolSize: 200
       minIdle: 100
+
 
 springfox:
   documentation:
