@@ -56,3 +56,11 @@ mybatis:
     cache-enabled: false
     call-setters-on-nulls: true
     useGeneratedKeys: true
+
+# redisson分布式锁
+redisson:
+  lock:
+    server:
+      address: 127.0.0.1:6379
+      type: standalone
+      database: 0
