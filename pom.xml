@@ -75,6 +75,32 @@
             <artifactId>redis-lock-spring-boot-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <!--分布式限流组件-->
+        <dependency>
+            <groupId>com.zhliang.pzy</groupId>
+            <artifactId>distributed-limit-spirng-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>2.3.1.RELEASE</version>
+        </dependency>
+
+        <!--过滤Xss攻击-->
+        <dependency>
+            <groupId>com.zhliang.pzy</groupId>
+            <artifactId>xss-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!--API加解密-->
+        <dependency>
+            <groupId>com.pzy.zhliang</groupId>
+            <artifactId>api-encrypt-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
