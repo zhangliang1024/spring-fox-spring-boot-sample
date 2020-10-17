@@ -101,6 +101,13 @@
             <artifactId>api-encrypt-spring-boot-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <!--二级缓存-->
+        <dependency>
+            <groupId>com.zhliang.pzy</groupId>
+            <artifactId>cache-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
